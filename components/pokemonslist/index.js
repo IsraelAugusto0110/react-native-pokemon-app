@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FlatList, ScrollView, Text, View } from "react-native";
 import styles from "./style";
 import ApiPokemon from "../../api/api-pokemons";
+import Card from "../common/cards";
 
 function PokemonsList() {
   const [pokemonsList, setPokemonsList] = useState();
@@ -18,13 +19,11 @@ function PokemonsList() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Pokemons list</Text>
-      <View style={styles.container}>
-        <FlatList
-          data={pokemonsList}
-          renderItem={({ item }) => <Text>{item.name}</Text>}
-        />
-      </View>
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={pokemonsList}
+        renderItem={({ item }) => <Card name={item.name} />}
+      />
     </View>
   );
 }
