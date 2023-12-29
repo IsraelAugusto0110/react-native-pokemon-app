@@ -1,15 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-  },
   container2: {
-    height: 60,
     margin: 12,
-    width: 350,
+    width: 300,
     backgroundColor: "lightgray",
     borderRadius: 50,
     flexDirection: "row",

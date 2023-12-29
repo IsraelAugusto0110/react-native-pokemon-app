@@ -3,24 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
     alignItems: "center",
     justifyContent: "flex-start",
-  },
-  containertext: {
-    alignItems: "flex-start",
     padding: 10,
-    marginTop: 8,
   },
-  titleText: {
+  text: {
+    fontSize: 15,
     fontWeight: "bold",
-    fontSize: 20,
-    marginTop: 8,
-  },
-  messageText: {
-    fontWeight: "400",
-    fontSize: 16,
-    marginTop: 8,
   },
 });
 
