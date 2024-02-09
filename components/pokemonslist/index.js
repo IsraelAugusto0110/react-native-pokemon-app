@@ -5,7 +5,7 @@ import ApiPokemon from "../../api/api-pokemons";
 import Card from "../common/cards";
 
 function PokemonsList() {
-  const [pokemonsList, setPokemonsList] = useState();
+  const [pokemonsList, setPokemonsList] = useState([]);
 
   useEffect(() => {
     ApiPokemon.getAllPokemons()
@@ -22,7 +22,7 @@ function PokemonsList() {
       <FlatList
         showsVerticalScrollIndicator={false}
         data={pokemonsList}
-        renderItem={({ item }) => <Card name={item.name} />}
+        renderItem={({ item }) => <Card name={item.name} url={item.url} />}
       />
     </View>
   );
