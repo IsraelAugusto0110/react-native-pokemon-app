@@ -4,9 +4,11 @@ import styles from "./style";
 
 export default function Card({ name, url }) {
   const [pokemonName, setPokemonName] = useState("");
+  const [pokemonUrl, setPokemonUrl] = useState("");
 
   useEffect(() => {
     setPokemonName(name);
+    setPokemonUrl(url);
   });
 
   function handlePress() {
