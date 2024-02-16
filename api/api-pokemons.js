@@ -1,7 +1,7 @@
 import api from "./api";
 
-const getAllByNumber = (name) => {
-  return api.get(`/${name}`);
+const getAllByNumber = (url) => {
+  return api.get(url);
 };
 
 const getAllPokemons = () => {
