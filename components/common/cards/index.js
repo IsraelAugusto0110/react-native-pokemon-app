@@ -6,6 +6,7 @@ import ApiPokemon from "../../../api/api-pokemons";
 export default function Card({ name, url }) {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonUrl, setPokemonUrl] = useState("");
+  const [pokemonData, setPokemonData] = useState();
 
   useEffect(() => {
     setPokemonName(name);
@@ -13,11 +14,13 @@ export default function Card({ name, url }) {
     //
   }, []);
 
-  function handlePress() {
+  async function handlePress() {
     //console.log(pokemonName, pokemonUrl);
-    ApiPokemon.getAllByNumber(pokemonUrl)
+    await ApiPokemon.getAllByNumber(pokemonUrl)
       .then((res) => {
-        console.log(res.data.types[1]);
+        //console.log(res.data.types[1]);
+        setPokemonData(res.data);
+        console.log(pokemonData.types[0]);
       })
       .catch((err) => {
         console.log(err);
