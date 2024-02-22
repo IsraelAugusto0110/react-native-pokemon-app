@@ -32,7 +32,11 @@ export default function Card({ name, url }) {
         <FlatList
           horizontal
           data={pokemonType}
-          renderItem={({ item }) => <Text>{item.type.name} </Text>}
+          renderItem={({ item }) => (
+            <View style={styles.containerType}>
+              <Text>{item.type.name} </Text>
+            </View>
+          )}
         />
       </View>
     </TouchableOpacity>
