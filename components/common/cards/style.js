@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     backgroundColor: "lightgreen",
     margin: 5,
     padding: 15,
+    flexDirection: "row",
   },
   textName: {
     fontSize: 20,
@@ -13,12 +14,21 @@ const styles = StyleSheet.create({
     color: "#ffff",
   },
   containerType: {
-    borderRadius: 15,
-    backgroundColor: "white",
     padding: 5,
+    backgroundColor: "lightblue",
+    borderRadius: 50,
     marginRight: 5,
-    width: 70,
     alignItems: "center",
+    justifyContent: "center",
+  },
+  typeText: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "white",
+  },
+  containerImage: {
+    height: 50,
+    width: 50,
   },
 });
 
