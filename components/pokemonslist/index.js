@@ -20,6 +20,7 @@ function PokemonsList() {
   return (
     <View style={styles.container}>
       <FlatList
+        initialNumToRender={20}
         showsVerticalScrollIndicator={false}
         data={pokemonsList}
         renderItem={({ item }) => <Card name={item.name} url={item.url} />}

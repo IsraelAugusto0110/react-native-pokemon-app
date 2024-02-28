@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     margin: 5,
     padding: 15,
     flexDirection: "row",
+    width: "auto",
   },
   textName: {
     fontSize: 20,
@@ -27,8 +28,10 @@ const styles = StyleSheet.create({
     color: "white",
   },
   containerImage: {
-    height: 50,
-    width: 50,
+    height: 120,
+    width: 120,
+    padding: 15,
+    marginLeft: 10,
   },
 });
 

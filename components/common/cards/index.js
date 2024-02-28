@@ -7,7 +7,7 @@ export default function Card({ name, url }) {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonUrl, setPokemonUrl] = useState("");
   const [pokemonType, setPokemonType] = useState([]);
-  const [pokemonSprite, setPokemonSprite] = useState();
+
   const [pokemonId, setPokemonId] = useState();
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Card({ name, url }) {
     ApiPokemon.getAllByNumber(url)
       .then((res) => {
         setPokemonType(res.data.types);
-        setPokemonSprite(res.data.sprites.front_default);
+
         setPokemonId(res.data.id);
       })
       .catch((err) => {
@@ -28,7 +28,6 @@ export default function Card({ name, url }) {
 
   async function handlePress() {
     console.log(pokemonName);
-    console.log(pokemonSprite);
   }
 
   return (
@@ -48,7 +47,12 @@ export default function Card({ name, url }) {
           />
         </View>
         <View style={styles.containerImage}>
-          <Image source={{ uri: pokemonSprite }} />
+          <Image
+            source={{
+              uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`,
+            }}
+            style={{ width: 115, height: 115 }}
+          />
         </View>
       </View>
     </TouchableOpacity>
