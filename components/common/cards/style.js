@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../../../constants/colors";
 
 const styles = StyleSheet.create({
   container: {
     borderRadius: 25,
-    backgroundColor: "lightgreen",
+    backgroundColor: colors["fairy"],
     margin: 5,
     padding: 15,
     flexDirection: "row",

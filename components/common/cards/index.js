@@ -18,7 +18,6 @@ export default function Card({ name, url }) {
     ApiPokemon.getAllByNumber(url)
       .then((res) => {
         setPokemonType(res.data.types);
-
         setPokemonId(res.data.id);
       })
       .catch((err) => {
