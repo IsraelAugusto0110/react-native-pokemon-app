@@ -31,7 +31,12 @@ export default function Card({ name, url }) {
 
   return (
     <TouchableOpacity onPress={handlePress}>
-      <View style={styles.container}>
+      <View
+        style={[
+          styles.container(pokemonType[0].type.name),
+          styles.containerRound,
+        ]}
+      >
         <View>
           <Text style={styles.textName}>Id: {pokemonId}</Text>
           <Text style={styles.textName}>{pokemonName}</Text>
