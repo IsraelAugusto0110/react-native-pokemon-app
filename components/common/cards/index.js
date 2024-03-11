@@ -38,7 +38,7 @@ export default function Card({ name, url }) {
         ]}
       >
         <View>
-          <Text style={styles.textName}>Id: {pokemonId}</Text>
+          <Text style={styles.textName}>ID: {pokemonId}</Text>
           <Text style={styles.textName}>{pokemonName}</Text>
           <FlatList
             horizontal
